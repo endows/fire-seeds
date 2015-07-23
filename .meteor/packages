@@ -13,3 +13,4 @@ materialize:materialize
 percolate:velocityjs
 jquery
 peerlibrary:blaze-components
+iron:router
