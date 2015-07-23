@@ -1,0 +1,7 @@
+template(name='Seed')
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+  
+  a.btn-floating.btn-large.waves-effect.waves-light.orange.tooltipped(onClick='explosion()' data-position='bottom', data-tooltip='火に油を注ぐ')
+    i.material-icons format_color_fill
+  each fire_count
+    span.glyphicon.glyphicon-fire.burn

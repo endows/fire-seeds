@@ -3,5 +3,8 @@ if(Meteor.isClient){
     this.route('start',{
       path:'/'
     });
+    this.route('growFire',{
+      path:'/growFire'
+    });
   });
 }
