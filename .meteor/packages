@@ -10,3 +10,5 @@ insecure
 mquandalle:jade
 twbs:bootstrap
 materialize:materialize
+percolate:velocityjs
+jquery
