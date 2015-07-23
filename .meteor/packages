@@ -12,3 +12,4 @@ twbs:bootstrap
 materialize:materialize
 percolate:velocityjs
 jquery
+peerlibrary:blaze-components

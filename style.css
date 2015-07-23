@@ -1,13 +1,11 @@
-.glyphicon-fire {
+#main-icon {
   font-size: 500px;
   color: #58ACFA;
 }
-.img01 {
-  opacity: 0;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: red;
+
+.burn {
+  color: #58ACFA;
+  font-size: 50px;
 }
 
 span {
