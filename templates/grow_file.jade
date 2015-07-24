@@ -16,7 +16,13 @@ template(name='growFire')
           .card-action
             +Seed
     .row
-      .col.s6
-        .card
-          .card-content
-            +Oil
+      if hasOil
+        .col.s6
+          .card
+            .card-content
+              +Oil
+    .row
+      .offset-s6
+        a(href='/goOut' class="{{#if hasOil}}disabled{{else}}{{/if}}").waves-effect.waves-light.btn
+          i.material-icons.cloud
+          | 次へ

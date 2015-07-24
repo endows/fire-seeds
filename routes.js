@@ -3,7 +3,7 @@ if(Meteor.isClient){
     this.route('start',{
       path:'/'
     });
-    this.route('growFire',{
+    this.route('GrowFire',{
       path:'/growFire'
     });
     this.route('goOut',{
