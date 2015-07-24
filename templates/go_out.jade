@@ -1,8 +1,10 @@
-template(name='growFire')
+template(name='goOut')
+
   .container
     .row
       blockquote.grey-text
-        h5 オイルを投下することで、アイディアを応援できます
+        h5 炎は1日1コづつ消えていき、
+        h5 すべての炎が消えるとー
     .row
       .col.s8
         .card
@@ -12,11 +14,5 @@ template(name='growFire')
           .card-content.grey-text
             p
               | ツイートの内容から、理想のパートナーを探し出してくれるサービス
-              | 
           .card-action
-            +Seed
-    .row
-      .col.s6
-        .card
-          .card-content
-            +Oil
+            +Seed mode='goout'

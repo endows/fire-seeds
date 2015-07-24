@@ -6,5 +6,8 @@ if(Meteor.isClient){
     this.route('growFire',{
       path:'/growFire'
     });
+    this.route('goOut',{
+      path:'/goOut'
+    });
   });
 }
