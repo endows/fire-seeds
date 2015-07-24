@@ -3,42 +3,54 @@ var Seed = BlazeComponent.extendComponent({
     return 'Seed';
   },
 
-  // Seed:function(mode){
-  //   console.log(mode)
-  // },
-
-  // constructor: function(kwargs) {
-  //   return this.cases = kwargs.hash;
-  // },
-
-  onRendered:function(){
-
+  onRendered: function() {
+    Session.set('fire_count',1)
+    if (this._componentInternals.templateInstance.data.mode == 'goout') {
+      this.go_out()
+    }
   },
-
-  fires: new ReactiveArray([1, 2, 3]),
 
   explosion: function(e) {
     if (Session.get('oil_count') == 0) {
       return false
     }
-    this.fires.unshift('0')
-    $('.burn').last().velocity({
-      "color": "#FE642E"
-    }).velocity("reverse", {
-      "delay": 500
-    });
     Session.set('oil_count', Session.get('oil_count') - 1)
+    Session.set('fire_count', Session.get('fire_count') + 1 )
+    setTimeout(function(){
+      $('.burn').last().velocity({
+        "color": "#FE642E"
+      }).velocity("reverse", {
+        "delay": 500
+      });
+    },100)
+
+
+
   },
 
   fire_count: function() {
-    return this.fires.list()
+    var arr = []
+    for (var i = 0; i < Session.get('fire_count'); i++) {
+      arr[i] = i;
+    }
+    return arr
   },
 
-  go_out:function(){
+  go_out: function() {
+    Session.set('oil_count',0)
+    Session.set('fire_count',4)
     var time = 600
-    setInterval(function(){
-      $('.burn').last().fadeOut(time,function(){$(this).remove()})
-    },time)
+    setInterval(function() {
+      $('.burn').last().fadeOut(time, function() {
+        $(this).remove()
+      })
+      if (!$('.burn').length) {
+        $('#seed').fadeOut(100,function(){
+          $('#hided_text').fadeIn()
+        })
+      }
+    }, time)
+
   },
 
   checkHasNotOil: function() {

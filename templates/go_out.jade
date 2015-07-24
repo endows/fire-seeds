@@ -6,7 +6,7 @@ template(name='goOut')
         h5 炎は1日1コづつ消えていき、
         h5 すべての炎が消えるとー
     .row
-      .col.s8
+      .col.s8#seed
         .card
           .card-image
             img(src='1648251.jpg')
@@ -15,4 +15,6 @@ template(name='goOut')
             p
               | ツイートの内容から、理想のパートナーを探し出してくれるサービス
           .card-action
-            +Seed mode='goout'
+            +Seed mode='goout' id='go_out_seed'
+    blockquote.grey-text#hided_text(style='display:none;')
+      h5 プロジェクトは消えてしまいます
