@@ -22,12 +22,12 @@ var Seed = BlazeComponent.extendComponent({
     return this.fires.list()
   },
 
-  oil_count: function() {
-    var arr = []
-    for (var i = 0; i < Session.get('oil_count'); i++) {
-      arr[i] = i;
+   checkHasNotOil:function(){
+    if(Session.get('oil_count') == 0){
+      return true
+    }else{
+      return false
     }
-    return arr
   },
 
   events: function() {
