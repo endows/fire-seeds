@@ -1,18 +1,20 @@
 template(name='growFire')
   .container
     .row
-      blockquote
-        h5 応援する方法は簡単。
-          br
-          |火に油を注ぐだけ
+      blockquote.grey-text
+        h5 オイルを投下することで、アイディアを応援できます
     .row
       .col.s8
-        .card.blue-grey.darken-1
-          .card-content.white-text
-            span.card-title Card Title
+
+        //- .card.blue-grey.darken-1
+        .card
+          .card-image
+            img(src='1648251.jpg')
+            span.card-title.white-text ツイラブ！
+          .card-content.grey-text
             p
-              | I am a very simple card. I am good at containing small bits of information.
-              | I am convenient because I require little markup to use effectively.
+              | ツイートの内容から、理想のパートナーを探し出してくれるサービス
+              | 
           .card-action
             +Seed
     .row
