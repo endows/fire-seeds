@@ -16,5 +16,10 @@ template(name='goOut')
               | ツイートの内容から、理想のパートナーを探し出してくれるサービス
           .card-action
             +Seed mode='goout' id='go_out_seed'
-    blockquote.grey-text#hided_text(style='display:none;')
-      h5 プロジェクトは消えてしまいます
+    #hided_text(style='display:none;')
+      blockquote.grey-text
+        h5 プロジェクトは消えてしまいます
+      .row
+        .offset-s6
+          a(data-position='bottom', data-tooltip='準備中・・' ).tooltipped.waves-effect.waves-light.btn
+            | 次へ(準備中)
